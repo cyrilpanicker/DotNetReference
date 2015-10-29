@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EFReference {
+namespace EF {
 
 
-    public partial class Index {
+    public partial class Home {
 
         /// <summary>
         /// form1 control.

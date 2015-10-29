@@ -4,15 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using EF.DataAccessLayer;
+using EF.Models;
 
-namespace EFReference {
-    public partial class Index : System.Web.UI.Page {
-        private ObjectDbContext AppContext = new ObjectDbContext { };
+namespace EF {
+    public partial class Home : System.Web.UI.Page {
+        private Repository repository = new Repository { };
         protected void Page_Load(object sender, EventArgs e) {
 
         }
         protected IEnumerable<Employee> GetEmployees() {
-            return AppContext.Employees;
+            return repository.Employees;
         }
     }
 }

@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using EF.Models;
+using System.Data.Entity;
 
-namespace EFReference {
-    public class ObjectDbContext :DbContext{
+namespace EF.DataAccessLayer {
+    public class EntityContext : DbContext {
         public DbSet<Employee> Employees { get; set; }
     }
 }

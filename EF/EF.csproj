@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{214EFB43-177A-49CA-9B3F-8B41A121E4F8}</ProjectGuid>
+    <ProjectGuid>{A3438E4A-D900-4BF3-91A1-5D158D08A8A9}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EFReference</RootNamespace>
-    <AssemblyName>EFReference</AssemblyName>
+    <RootNamespace>EF</RootNamespace>
+    <AssemblyName>EF</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -56,7 +56,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -75,7 +74,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Index.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -85,20 +83,23 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Home.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Employee.cs" />
-    <Compile Include="Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="DataAccessLayer\EntityContext.cs" />
+    <Compile Include="DataAccessLayer\Repository.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ObjectDbContext.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -112,9 +113,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>58724</DevelopmentServerPort>
+          <DevelopmentServerPort>61903</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:58724/</IISUrl>
+          <IISUrl>http://localhost:61903/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
