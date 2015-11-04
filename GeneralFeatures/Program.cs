@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GeneralFeatures {
     class Program {
         static void Main(string[] args) {
-            TaskApi.Main();
+            NamedAndOptionalParameters.Main();
         }
     }
 }

@@ -10,18 +10,43 @@ using System.Web.UI.WebControls;
 namespace SportsStore.Pages {
     public partial class Listing : System.Web.UI.Page {
 
-        private ProductRepository repository = new ProductRepository { };
+        private ProductRepository Repository = new ProductRepository { };
         private int PageSize = 4;
-
-        protected int CurrentPage {
+        private IEnumerable<Product> FilteredProducts {
             get {
-                var page = GetPageFromRequest();
-                return page > MaxPage ? MaxPage : page;
+                if(CurrentCategory == null) {
+                    return Repository.Products;
+                } else {
+                    return Repository.Products
+                        .Where(product => product.Category == CurrentCategory);
+                }
             }
         }
+
+        protected CartLine CartLine = new CartLine { };
         protected int MaxPage {
             get {
-                return (int)Math.Ceiling((decimal)repository.Products.Count() / PageSize);
+                return (int)Math.Ceiling((decimal)FilteredProducts.Count() / PageSize);
+            }
+        }
+        protected int CurrentPage {
+            get {
+                int currentPage;
+                var currentPageString = (string)RouteData.Values["page"] ?? (string)Request.QueryString["page"];
+                return currentPageString != null && int.TryParse(currentPageString, out currentPage) ? currentPage : 1;
+            }
+        }
+        protected string CurrentCategory {
+            get {
+                return (string)RouteData.Values["category"] ?? (string)Request.QueryString["category"];
+            }
+        }
+        public IEnumerable<Product> ProductsByPage {
+            get {
+                return FilteredProducts
+                    .OrderBy(product => product.ProductID)
+                    .Skip((CurrentPage - 1) * PageSize)
+                    .Take(PageSize);
             }
         }
 
@@ -29,18 +54,8 @@ namespace SportsStore.Pages {
 
         }
 
-        private int GetPageFromRequest() {
-            int page;
-            var pageString = (string)RouteData.Values["page"] ?? Request.QueryString["page"];
-            return pageString != null && int.TryParse(pageString, out page) ? page : 1;
+        public System.Collections.IEnumerable Unnamed_GetData() {
+            return null;
         }
-
-        protected IEnumerable<Product> GetProducts() {
-            return repository.Products
-                .OrderBy(product => product.ProductID)
-                .Skip((CurrentPage-1) * PageSize)
-                .Take(PageSize);
-        }
-
     }
 }

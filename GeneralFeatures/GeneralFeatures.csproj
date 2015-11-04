@@ -64,6 +64,7 @@
     <Compile Include="LINQ.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
+    <Compile Include="NamedAndOptionalParameters.cs" />
     <Compile Include="ObjectIntializers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

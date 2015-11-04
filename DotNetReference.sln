@@ -9,6 +9,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore", "SportsStore\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF", "EF\EF.csproj", "{A3438E4A-D900-4BF3-91A1-5D158D08A8A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing", "Routing\Routing.csproj", "{3F41F652-E7B1-4C38-BD35-B9EDAB517964}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControls", "UserControls\UserControls.csproj", "{E60FE9DD-8F3A-42B9-BD28-557045C54311}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{68EBB645-8362-4DEB-9150-EEB3FC327829}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiDemo", "ApiDemo\ApiDemo.csproj", "{F69E6551-8047-4CE8-9186-E7C878A57FD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Template", "API.Template\API.Template.csproj", "{B87F7B53-4DA2-4049-B611-ADDE08C4050C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Client", "API.Client\API.Client.csproj", "{81ACCE13-2F58-4D27-8858-65ED0F19EF88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelProgramming", "ParallelProgramming\ParallelProgramming.csproj", "{6FE9CC31-EBA2-497E-900D-618C48D64627}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +41,34 @@ Global
 		{A3438E4A-D900-4BF3-91A1-5D158D08A8A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3438E4A-D900-4BF3-91A1-5D158D08A8A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3438E4A-D900-4BF3-91A1-5D158D08A8A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F41F652-E7B1-4C38-BD35-B9EDAB517964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F41F652-E7B1-4C38-BD35-B9EDAB517964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F41F652-E7B1-4C38-BD35-B9EDAB517964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F41F652-E7B1-4C38-BD35-B9EDAB517964}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E60FE9DD-8F3A-42B9-BD28-557045C54311}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E60FE9DD-8F3A-42B9-BD28-557045C54311}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E60FE9DD-8F3A-42B9-BD28-557045C54311}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E60FE9DD-8F3A-42B9-BD28-557045C54311}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68EBB645-8362-4DEB-9150-EEB3FC327829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68EBB645-8362-4DEB-9150-EEB3FC327829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68EBB645-8362-4DEB-9150-EEB3FC327829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68EBB645-8362-4DEB-9150-EEB3FC327829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F69E6551-8047-4CE8-9186-E7C878A57FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F69E6551-8047-4CE8-9186-E7C878A57FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F69E6551-8047-4CE8-9186-E7C878A57FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F69E6551-8047-4CE8-9186-E7C878A57FD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B87F7B53-4DA2-4049-B611-ADDE08C4050C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B87F7B53-4DA2-4049-B611-ADDE08C4050C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B87F7B53-4DA2-4049-B611-ADDE08C4050C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B87F7B53-4DA2-4049-B611-ADDE08C4050C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81ACCE13-2F58-4D27-8858-65ED0F19EF88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81ACCE13-2F58-4D27-8858-65ED0F19EF88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81ACCE13-2F58-4D27-8858-65ED0F19EF88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81ACCE13-2F58-4D27-8858-65ED0F19EF88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FE9CC31-EBA2-497E-900D-618C48D64627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FE9CC31-EBA2-497E-900D-618C48D64627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FE9CC31-EBA2-497E-900D-618C48D64627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FE9CC31-EBA2-497E-900D-618C48D64627}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
