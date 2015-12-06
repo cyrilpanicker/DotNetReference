@@ -23,7 +23,7 @@ namespace ParallelProgramming {
                 });
             };
 
-            Func<int, Task> exceptionAsync = (int input) => {
+            Func<int, Task> exceptionAsync = input => {
                 return Task.Factory.StartNew(() => {
                     Thread.Sleep(5000);
                     if (input % 2 == 0) {
@@ -65,9 +65,9 @@ namespace ParallelProgramming {
                 }, TaskContinuationOptions.NotOnFaulted);
 
             exceptionAsync(2)
-                .ContinueWith(_=>{
+                .ContinueWith(_ => {
                     Console.WriteLine("exceptionAsync failed");
-                },TaskContinuationOptions.OnlyOnFaulted);
+                }, TaskContinuationOptions.OnlyOnFaulted);
 
             Console.ReadLine();
 

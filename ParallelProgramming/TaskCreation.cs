@@ -49,6 +49,9 @@ namespace ParallelProgramming {
             task2.Start();
             Console.WriteLine(task2.Result);//blocks until Result is available
 
+            var completedTask = Task.FromResult<int>(10);
+            Console.WriteLine(completedTask.IsCompleted + " " + completedTask.Result);
+
             Console.WriteLine("Main method complete");
             Console.ReadKey();
         }

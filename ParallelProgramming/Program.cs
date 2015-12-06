@@ -8,7 +8,7 @@ using System.Threading;
 namespace ParallelProgramming {
     class Program {
         static void Main(string[] args) {
-            TaskContinuation.Main();
+            ControlTaskCompletion.Main();
         }
     }
 }
